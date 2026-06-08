@@ -1,5 +1,5 @@
 function drawEnding3() {
-  background(22, 22, 70);
+  background(220, 2, 70);
 
   // Title
   fill(255);

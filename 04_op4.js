@@ -1,5 +1,5 @@
 function drawOP4() {
-  background(50, 0, 255);
+  background(100, 150, 255);
 
   // Title
   fill(255);

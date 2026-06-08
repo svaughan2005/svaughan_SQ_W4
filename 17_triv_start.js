@@ -1,5 +1,5 @@
 function drawTrivStart() {
-  background(0, 24, 210);
+  background(50, 240, 210);
   // Title
   fill(255);
   textAlign(CENTER);
