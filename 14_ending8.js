@@ -21,5 +21,5 @@ function drawEnding8() {
 
   //drawButton(end5);
   // drawButton(end6);
-  drawButton(restart);
+  drawButton(goAgain);
 }

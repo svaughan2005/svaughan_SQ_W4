@@ -16,5 +16,5 @@ function drawEnding2() {
     185
   );
 
-  drawButton(restart);
+  drawButton(goAgain);
 }

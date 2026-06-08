@@ -17,5 +17,5 @@ function drawEnding1() {
   );
   text("but no way you’re dissing Caribbean music.", width / 2, 210);
 
-  drawButton(restart);
+  drawButton(goAgain);
 }

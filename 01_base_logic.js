@@ -91,7 +91,7 @@ function mousePressed() {
   } else if (selNum === 6 && isMouseOver(end8.x, end8.y, BTN_W, BTN_H)) {
     selNum = 108;
     gameOver = true;
-  } else if (gameOver && isMouseOver(restart.x, restart.y, BTN_W, BTN_H)) {
+  } else if (gameOver && isMouseOver(goAgain.x, goAgain.y, BTN_W, BTN_H)) {
     selNum = 0;
     gameOver = false;
   }

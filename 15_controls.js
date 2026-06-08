@@ -89,5 +89,5 @@ function iButtionPos() {
   end7 = myButton(BTN_Y[0], "Rihanna");
   end8 = myButton(BTN_Y[1], "CaridB");
 
-  restart = myButton(370, "Restart");
+  goAgain = myButton(370, "Restart");
 }
