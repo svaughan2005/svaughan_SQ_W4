@@ -37,7 +37,7 @@ function drawButton(button) {
   pop();
 }
 
-// screen 1
+// screen 1 wavelength
 let op1;
 let op2;
 
@@ -48,7 +48,20 @@ let end2;
 // screen op 4
 let end3;
 let end4;
-// let test;
+
+// screen game select
+let waveL;
+let triv;
+
+// triv screen 1
+let op5;
+let op6;
+
+let end5;
+let end6;
+
+let end7;
+let end8;
 
 function iButtionPos() {
   op1 = myButton(BTN_Y[0], "ONE GYAL EVERY DAYYYYYYYYYYYY");
@@ -60,4 +73,17 @@ function iButtionPos() {
 
   end3 = myButton(BTN_Y[0], "Ew no, pineapple does NOT belong on pizza");
   end4 = myButton(BTN_Y[1], "Are you crazy? Pineapple on pizza is awesome!");
+
+  waveL = myButton(BTN_Y[0], "Wavelength!");
+  triv = myButton(BTN_Y[1], "Barbados Trivia!");
+
+  op5 = myButton(BTN_Y[0], "Bridgetown");
+
+  end5 = myButton(BTN_Y[0], "November 30th, 1966");
+  end6 = myButton(BTN_Y[1], "March, 21st, 1980");
+
+  op6 = myButton(BTN_Y[1], "Speightstown");
+
+  end7 = myButton(BTN_Y[0], "Rihanna");
+  end8 = myButton(BTN_Y[1], "CaridB");
 }
