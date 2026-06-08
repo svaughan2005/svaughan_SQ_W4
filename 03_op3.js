@@ -14,7 +14,7 @@ function drawOP3() {
     width / 2,
     185
   );
-  text("(Specifically  soca, basement soca and dancehall) ", width / 2, 210);
+  text("(Specifically  soca, bashement soca and dancehall) ", width / 2, 210);
 
   text(
     "(1-5 being tolerable / don’t listen to it. 6-10 being I love it) ",
