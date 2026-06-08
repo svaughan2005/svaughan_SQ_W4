@@ -1,58 +1,63 @@
-function makeButton(x, y, label, colour) {
-  let button = {
-    x: x,
-    y: y,
+function isMouseOver(x, y, w, h) {
+  return (
+    mouseX > x - w / 2 &&
+    mouseX < x + w / 2 &&
+    mouseY > y - h / 2 &&
+    mouseY < y + h / 2
+  );
+}
+
+function myButton(ypos, label) {
+  return {
+    x: BTN_X,
+    y: ypos,
     label: label,
     selected: false,
-    colour: colour,
-    highscore: 0,
   };
-  return button;
 }
 
-function drawButton(b) {
-  rectMode(CENTER);
+function drawButton(button) {
+  push();
+  rectMode(CENTER); // x, y are the centre of the rectangle
 
-  if (b.selected) {
-    fill("green");
-  } else {
-    fill(b.colour);
-  }
+  let isHovered = isMouseOver(button.x, button.y, BTN_W, BTN_H);
+  // Button background — lighter colour when hovered
+  fill(isHovered ? color(90, 80, 10) : color(0, 40, 60));
+  stroke(isHovered ? color(180, 180, 220) : color(80, 80, 100));
+  strokeWeight(2);
+  rect(button.x, button.y, BTN_W, BTN_H, 8); // rounded corners
 
-  if (buttonHitTest(b)) {
-    stroke(0);
-    strokeWeight(10);
-  } else {
-    stroke(0);
-    strokeWeight(1);
-  }
-
-  rect(b.x, b.y, buttonWidth, buttonHeight, 10);
-  fill(0);
+  // Button label — centred inside the button
+  fill(255);
   noStroke();
-  textSize(15);
   textAlign(CENTER, CENTER);
-  text(b.label, b.x, b.y);
+  textSize(18);
+  text(button.label, button.x, button.y);
+
+  pop();
 }
 
-let choice1;
-function iButtonPosition() {
-  choice1 = makeButton(width / 2, height / 2, "Choice 1", "rgb(227,72,246)");
+// screen 1
+let op1;
+let op2;
 
-  /*
-    difficulty.easy =  makeButton(width / 2 - 120, height / 2 + 70, "Easy", "rgb(125,212,217)");
-	difficulty.medium = makeButton(width / 2, height / 2 + 70, "Medium", "rgb(223,158,49)");
-	difficulty.hard = makeButton(width / 2 + 120, height / 2 + 70, "Hard", "rgb(227,0,0)");
-	start = makeButton(width / 2, height / 2 + 140, "Start", "rgb(167,95,193)");
-	tutorial = makeButton(width - 90, height - 250, "Tutorial", "rgb(231,199,127)");
-    */
-}
+// screen op 3
+let end1;
+let end2;
 
-function buttonHitTest(button) {
-  return (
-    mouseX <= button.x + buttonWidth / 2 &&
-    mouseX >= button.x - buttonWidth / 2 &&
-    mouseY <= button.y + buttonHeight / 2 &&
-    mouseY >= button.y - buttonHeight / 2
-  );
+// screen op 4
+let end3;
+let end4;
+// let test;
+
+function iButtionPos() {
+  op1 = myButton(BTN_Y[0], "ONE GYAL EVERY DAYYYYYYYYYYYY");
+
+  end1 = myButton(BTN_Y[0], "1-5");
+  end2 = myButton(BTN_Y[1], "6-10");
+
+  op2 = myButton(BTN_Y[1], "Im not sure, ig it depends on the context?");
+
+  end3 = myButton(BTN_Y[0], "Ew no, pineapple does NOT belong on pizza");
+  end4 = myButton(BTN_Y[1], "Are you crazy? Pineapple on pizza is awesome!");
 }
