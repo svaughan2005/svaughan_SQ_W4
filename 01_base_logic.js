@@ -6,6 +6,7 @@ const BTN_H = 52;
 const BTN_Y = [340, 400];
 
 let selNum = 0;
+let gameOver = false;
 
 // put preload, draw, allat in here
 
@@ -58,14 +59,18 @@ function mousePressed() {
     selNum = 3; // screen for choice 3
   } else if (selNum === 3 && isMouseOver(end1.x, end1.y, BTN_W, BTN_H)) {
     selNum = 101; // ending 1
+    gameOver = true;
   } else if (selNum === 3 && isMouseOver(end2.x, end2.y, BTN_W, BTN_H)) {
     selNum = 102; // ending 2
+    gameOver = true;
   } else if (selNum === 1 && isMouseOver(op2.x, op2.y, BTN_W, BTN_H)) {
     selNum = 4;
   } else if (selNum === 4 && isMouseOver(end3.x, end3.y, BTN_W, BTN_H)) {
     selNum = 103;
+    gameOver = true;
   } else if (selNum === 4 && isMouseOver(end4.x, end4.y, BTN_W, BTN_H)) {
     selNum = 104;
+    gameOver = true;
   } else if (selNum === 0 && isMouseOver(waveL.x, waveL.y, BTN_W, BTN_H)) {
     selNum = 1;
   } else if (selNum === 0 && isMouseOver(triv.x, triv.y, BTN_W, BTN_H)) {
@@ -74,13 +79,20 @@ function mousePressed() {
     selNum = 5;
   } else if (selNum === 5 && isMouseOver(end5.x, end5.y, BTN_W, BTN_H)) {
     selNum = 105;
+    gameOver = true;
   } else if (selNum === 5 && isMouseOver(end6.x, end6.y, BTN_W, BTN_H)) {
     selNum = 106;
+    gameOver = true;
   } else if (selNum === 2 && isMouseOver(op6.x, op6.y, BTN_W, BTN_H)) {
     selNum = 6;
   } else if (selNum === 6 && isMouseOver(end7.x, end7.y, BTN_W, BTN_H)) {
     selNum = 107;
+    gameOver = true;
   } else if (selNum === 6 && isMouseOver(end8.x, end8.y, BTN_W, BTN_H)) {
     selNum = 108;
+    gameOver = true;
+  } else if (gameOver && isMouseOver(restart.x, restart.y, BTN_W, BTN_H)) {
+    selNum = 0;
+    gameOver = false;
   }
 }

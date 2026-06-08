@@ -63,6 +63,8 @@ let end6;
 let end7;
 let end8;
 
+let restart;
+
 function iButtionPos() {
   op1 = myButton(BTN_Y[0], "ONE GYAL EVERY DAYYYYYYYYYYYY");
 
@@ -86,4 +88,6 @@ function iButtionPos() {
 
   end7 = myButton(BTN_Y[0], "Rihanna");
   end8 = myButton(BTN_Y[1], "CaridB");
+
+  restart = myButton(370, "Restart");
 }

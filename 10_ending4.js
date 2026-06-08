@@ -15,4 +15,6 @@ function drawEnding4() {
     width / 2,
     185
   );
+
+  drawButton(restart);
 }
