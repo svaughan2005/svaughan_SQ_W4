@@ -1,32 +1,20 @@
-# Week 4 Example 2: Rock Paper Scissors Best of 3
-
-## What This Example Demonstrates
-
-> **Note for students:** This section is included in example files only to help you study. Do not include it in your Side Quest submissions.
-
-This example builds on Example 1 by adding score tracking, multiple rounds, game states, and a full start and end screen to create a complete Best of 3 Rock Paper Scissors game.
-
-- **Game states** — the game moves through `STATE_START`, `STATE_PLAY`, and `STATE_OVER`; each state controls what gets drawn and what responds to clicks; stored as constants to prevent typos
-- **Score tracking** — `playerScore` and `npcScore` persist across rounds; only choices and results are reset between rounds using `nextRound()`
-- **Early win detection** — `playerChoose()` checks after each round whether someone has reached 2 wins; the game ends immediately rather than waiting for all 3 rounds
-- **`nextRound()` vs `resetGame()`** — `nextRound()` clears only the current choices while keeping scores; `resetGame()` resets everything for a brand new game
-- **Dynamic button labels** — the Next Round button changes its label to "See Result" when the game is over, using a ternary expression to pick the label based on game state
-- **`frameCount`** — a built-in p5.js variable that increases by 1 every frame; used in `drawStartScreen()` and `drawGameOverScreen()` to animate blobs where the blob timers from sketch.js aren't available
-- **Passing arguments to scene functions** — `drawGameScreen()` receives `playerBlobT` and `npcBlobT` as arguments so the blobs animate continuously across all screens
-- **Shared global scope across files** — `drawHUD()` in scenes.js reads `currentRound`, `MAX_ROUNDS`, `playerScore`, and `npcScore` directly from game.js without any extra wiring, because all files share the same global scope
+# svaughan_sq_W4
 
 ## Setup and Interaction Instructions
 
-To run the sketch locally, open `index.html` in Google Chrome using Live Server.
+Players can choose between either playing a game of Wavelength or a game of Barbados Trivia.
 
-Click **Start Game** to begin. Click **Rock**, **Paper**, or **Scissors** each round. First to win 2 rounds wins the game. Click **Play Again** to rematch.
+Wavelength questions / answer key is based on my personal preferences.
 
-**Opening the Chrome Console**
+There are 4 different end screens if you go the Wavelength route, each corresponding to how similar our tastes are based on the player's answers.
 
-- **Windows:** Press `F12` or `Ctrl + Shift + J`, then click the **Console** tab
-- **Mac:** Press `Cmd + Option + J`
+Barbados trivia questions are some super easy facts about my home country, Barbados.
 
-The console will show any errors in your sketch.
+There are 4 different end screens if you go the Trivia route, each corresponding to how many questions the player gets right.
+
+Click either **Wavelength** or **Barbados Trivia** to begin. On each screen, click the button that either resonates most with you (if you're playing Wavelength) or that you think is the correct answer (if you're playing Trivia)
+
+Click **Restart** to go back to the beginning.
 
 ## Assets
 
